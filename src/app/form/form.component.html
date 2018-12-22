@@ -1,0 +1,88 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+          <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+              <mat-card class="shipping-card">
+                <mat-card-header>
+                  <mat-card-title class="">Send us Your Ideas</mat-card-title>
+                  <mat-card-subtitle>Your ideas drive your city</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field class="full-width">
+                        <input matInput placeholder="First name" formControlName="firstName">
+                        <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+                          First name is <strong>required</strong>
+                        </mat-error>
+                        <mat-error *ngIf="addressForm.controls['firstName'].hasError('minlength')">
+                            First name must be <strong>longer</strong> than 3 characters.
+                          </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field class="full-width">
+                        <input matInput placeholder="Last name" formControlName="lastName">
+                        <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+                          Last name is <strong>required</strong>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field class="full-width">
+                        <input matInput placeholder="Email" formControlName="email">
+                        <mat-error *ngIf="addressForm.controls['email'].hasError('email')">
+                          <strong>Please enter a valid email address</strong>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field class="full-width">
+                        <input type="text" placeholder="City" matInput formControlName="city" [formControl]="cityControl"
+                          [matAutocomplete]="auto">
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option}}
+                          </mat-option>
+                        </mat-autocomplete>
+                        <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
+                          City is <strong>required</strong>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <mat-form-field class="full-width">
+                        <textarea matInput placeholder="Your idea" formControlName="idea"></textarea>
+                        <mat-error *ngIf="addressForm.controls['idea'].hasError('required')">
+                          Idea is <strong>required</strong>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col full-width">
+                          <mat-checkbox (change)="isAnonymous = !isAnonymous">Send your idea anonymously.</mat-checkbox>
+                    </div>
+                  </div>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-raised-button color="primary" type="submit" [disabled]="!addressForm.valid">Submit</button>
+                </mat-card-actions>
+              </mat-card>
+            </form>
+      </div>
+      <div class="col form-image-container">
+        <img class="form-image" src="../../assets/img/bulb.png" (click)="toggleTheme()" alt="">
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,79 @@
+.full-width {
+  width: 100%;
+}
+
+.shipping-card {
+  min-width: 120px;
+  margin: 20px auto;
+}
+
+.mat-card {
+  box-shadow: unset !important;
+  background: transparent !important;
+}
+
+.mat-card-content {
+  margin-left: 20px;
+}
+
+.mat-card-title {
+  font-size: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1%;
+}
+
+.col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.mat-card-actions {
+  margin-left: 20px;
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .mat-card-content {
+    margin-left: 0;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .mat-card-content {
+    margin-left: 0;
+  }
+}
+
+
+.form-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-image {
+  width: 70%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .form-image-container {
+    display: none;
+  }
+  .mat-card-subtitle {
+    text-align: center;
+  }
+}
+

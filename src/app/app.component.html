@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<app-slideshow></app-slideshow>
+<app-about id="about"></app-about>
+<app-timelapse id="vegetation-map"></app-timelapse>
+<app-charts id="charts"></app-charts>
+<app-ideas-carousel id="ideas"></app-ideas-carousel>
+<app-form id="submit"></app-form>
+<router-outlet></router-outlet>
+<go-top-button  [animate]="true"
+                 [speed]="50"
+                 [acceleration]="2"
+                 [scrollDistance]="300"
+                 [classNames]="'scroll'"
+                 [styles]="{'position': 'fixed',
+                 'right': '10px',
+                 'top': '90%',
+                 'bottom': '10px',
+                 'cursor': 'pointer',
+                 'width': '50px',
+                 'height': '50px',
+                 'background-color': '#00c07f',
+                 'border-radius': '60px'}">
+                 <span style="color:white; font-weight: 100; border-style: none;" class="text-center display-4">^</span>
+  </go-top-button>
+  <app-footer></app-footer>

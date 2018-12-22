@@ -1,0 +1,103 @@
+.item { 
+  .mat-card {
+    margin: 0 16px;
+    .mat-card-content {
+      position: relative;
+      padding: 2rem;
+      min-height: 360px; // Adjust height as your need
+    }
+    .company-logo {
+     padding-bottom: 24px;
+    }
+    .text {
+      position: relative;
+      font-size: 1rem;
+      color: rgba(0,0,0, .64);
+      padding-bottom: 25px;
+      min-height: 240px;
+      margin: 0;
+    }
+    .user-detail {
+      position: absolute;
+      bottom: 25px;
+      left: 32px;
+      right: 0;
+      width: 50%;
+      //margin: auto;
+      .user-photo {
+        float: left;
+        margin-right: 8px;
+      }
+      .user-title {
+        font-size: 1rem;
+        float: left;
+        width: calc(100% - 5%) // - 56px 
+      }
+      .user-subtitle {
+        float: left;
+
+      }
+    }
+    
+  }
+}
+
+.mat-icon {
+  color: rgba(0,0,0, .64);
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .ngucarousel .carousel-right {
+    right: -15px;
+  }
+  .ngucarousel .carousel-left {
+    left: -15px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .ngucarousel .carousel-right {
+    right: -15px;
+  }
+  .ngucarousel .carousel-left {
+    left: -15px;
+  }
+}
+
+.home-section {
+  padding: 80px 0;
+}
+
+.ideas-section mat-card:hover {
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+}
+
+.thumb-up-icon {
+  float: right;
+  padding: 1.4rem;
+
+  &:hover {
+    color: teal;
+  }
+}
+
+.card-link {
+  float: right;
+  margin-top: 0.5rem;
+  color: gray;
+
+  &:hover {
+    color: teal;
+  }
+}
+
+.card-contents {
+  width: 100%;
+}
+
+.thumbs-up-container {
+  width: 50%;
+  float: right;
+  padding: 1rem;
+}

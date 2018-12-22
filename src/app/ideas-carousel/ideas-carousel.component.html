@@ -1,0 +1,38 @@
+<section id="ideas-section" class="ideas-section home-section" [ngClass]="{'light-gray': backgroundGray}">
+  <div class="container">
+    <div class="section-header">
+      <h2>Recent Ideas</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat unde inventore molestias ab adipisci eius
+        nisi placeat
+        at.
+      </p>
+    </div>
+    <ngu-carousel [inputs]="carouselOptions">
+      <ngu-item NguCarouselItem *ngFor="let idea of ideas">
+        <mat-card class="p-0">
+          <mat-card-content class="">
+            <p class="text">{{idea.text}}</p>
+            <div class="card-contents">
+              <div class="user-detail">
+                <span class="user-title">{{idea.title}}</span>
+                <span class="user-subtitle text-muted">{{idea.city}}</span>
+              </div>
+              <div class="thumbs-up-container">
+                  <a href="#!" class="card-link" [class.disabled]="idea.canUpvote" (click)="onUpvoteClick(idea); idea.canUpvote = false">
+                    <mat-icon matBadge={{idea.upvotes}} matBadgeColor="accent" class="card-icon">thumb_up</mat-icon>
+                  </a>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </ngu-item>
+
+      <button mat-fab NguCarouselPrev class='carousel-left'>
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+      <button mat-fab NguCarouselNext class='carousel-right'>
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </button>
+    </ngu-carousel>
+  </div>
+</section>

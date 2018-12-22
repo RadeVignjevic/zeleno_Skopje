@@ -1,0 +1,84 @@
+/*.about{
+
+  height: 400px;
+  justify-content: center;
+
+  h1{
+    position: relative;
+    top: 15%;
+    left: 47%;
+    color: green;
+
+  }
+  .social{
+    display: inline-block;
+    position: relative;
+    left: 85%;
+    padding: 5px;
+    button {
+      background-color: transparent;
+      margin: 2px;
+    }
+  }
+
+  p{
+    position: relative;
+    top: 25%;
+    left: 15%;
+    width: 900px;
+    text-align: center;
+  }
+}
+*/
+
+.about-section {
+  padding: 120px 0;
+  height: 100vh;
+}
+
+.about-text {
+  text-align: center;
+  .display-3 {
+    font-weight: 400;
+  }
+}
+
+.social {
+  font-size: 2.5rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.fb-icon {
+  &:hover {
+    color: #3B5998;
+    cursor: pointer;
+  }
+}
+
+.linkedin-icon {
+  &:hover {
+    color: #0077B5;
+    cursor: pointer;
+  }
+}
+
+.twitter-icon {
+  &:hover {
+    color: #1DA1F2;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .about-image-container {
+    display: none;
+  }
+
+  .about-section {
+    height: unset;
+  }
+}

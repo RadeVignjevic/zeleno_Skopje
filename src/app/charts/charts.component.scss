@@ -1,0 +1,7 @@
+.charts-section {
+    padding: 80px 0;
+    
+    /deep/ li.ng-star-inserted {
+        display: none !important;
+    }
+}

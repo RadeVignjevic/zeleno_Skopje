@@ -1,0 +1,53 @@
+//@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html, body { height: 100vh; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-button {
+  &:focus {
+    outline: none;
+  }
+}
+
+.ngucarousel {
+  position: relative;
+  max-width: 80vw; //1100px
+  margin: 0 auto;
+}
+.ngucarousel-inner {
+  padding: 8px 0 18px;
+}
+.ngucarousel .carousel-left,
+.ngucarousel .carousel-right {
+  position: absolute;
+  top: calc(50% - 28px);
+  background: #ffffff !important;
+  color: rgba(0, 0, 0, .87);
+}
+.ngucarousel .carousel-left {
+  left: -20px;
+}
+.ngucarousel .carousel-right {
+  right: -20px;
+}
+
+/*---- Media queries -----*/
+
+@media (max-width: 767px) {
+  .mat-card-title .mat-divider {
+      margin-left: 0;
+      margin-right: 0;
+  }
+  .cal-top-col {
+      width: 100%;
+  }
+  .accordion-handle {
+      flex-direction: column !important;
+  }
+  .app-error .error-icon {
+      height: 100px;
+      width: 100px;
+      font-size: 100px;
+  }
+}

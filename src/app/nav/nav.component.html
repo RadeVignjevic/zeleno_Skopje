@@ -1,0 +1,14 @@
+<mat-toolbar color="primary" [class.transparent]="navIsTransparent">
+  <div class="nav-items-container">
+    <button mat-button class="nav-item" (click)="scroll('about')">About</button>
+    <button mat-button class="nav-item" (click)="scroll('vegetation-map')">Map</button>
+    <button mat-button class="nav-item" (click)="scroll('charts')">Data</button>
+    <button mat-button class="nav-item" (click)="scroll('ideas')">Ideas</button>
+    <button mat-button class="nav-item" (click)="scroll('submit')">Submit</button>
+  </div>
+  <div>
+    <a class="nav-item" (click)="toggleTheme()">
+      <mat-icon>highlight</mat-icon>
+    </a>
+  </div>
+</mat-toolbar>
